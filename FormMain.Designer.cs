@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.groupBoxDevice1 = new System.Windows.Forms.GroupBox();
-            this.labelRamp1 = new System.Windows.Forms.Label();
-            this.textBoxRamp1 = new System.Windows.Forms.TextBox();
-            this.textBoxSine1 = new System.Windows.Forms.TextBox();
-            this.labelSine1 = new System.Windows.Forms.Label();
             this.textBoxRandom1 = new System.Windows.Forms.TextBox();
             this.labelRandom1 = new System.Windows.Forms.Label();
+            this.textBoxSine1 = new System.Windows.Forms.TextBox();
+            this.labelSine1 = new System.Windows.Forms.Label();
+            this.textBoxRamp1 = new System.Windows.Forms.TextBox();
+            this.labelRamp1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxRamp2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxRamp3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -58,6 +58,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.buttonSetting = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
+            this.buttonReadItemRamp1 = new System.Windows.Forms.Button();
+            this.buttonSubscribe = new System.Windows.Forms.Button();
             this.groupBoxDevice1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -80,22 +82,22 @@
             this.groupBoxDevice1.TabStop = false;
             this.groupBoxDevice1.Text = "Device 1";
             // 
-            // labelRamp1
+            // textBoxRandom1
             // 
-            this.labelRamp1.AutoSize = true;
-            this.labelRamp1.Location = new System.Drawing.Point(29, 31);
-            this.labelRamp1.Name = "labelRamp1";
-            this.labelRamp1.Size = new System.Drawing.Size(65, 20);
-            this.labelRamp1.TabIndex = 0;
-            this.labelRamp1.Text = "Ramp 1";
+            this.textBoxRandom1.Location = new System.Drawing.Point(29, 163);
+            this.textBoxRandom1.Name = "textBoxRandom1";
+            this.textBoxRandom1.Size = new System.Drawing.Size(100, 26);
+            this.textBoxRandom1.TabIndex = 5;
+            this.textBoxRandom1.Text = "0.00";
             // 
-            // textBoxRamp1
+            // labelRandom1
             // 
-            this.textBoxRamp1.Location = new System.Drawing.Point(29, 54);
-            this.textBoxRamp1.Name = "textBoxRamp1";
-            this.textBoxRamp1.Size = new System.Drawing.Size(100, 26);
-            this.textBoxRamp1.TabIndex = 1;
-            this.textBoxRamp1.Text = "0.00";
+            this.labelRandom1.AutoSize = true;
+            this.labelRandom1.Location = new System.Drawing.Point(29, 140);
+            this.labelRandom1.Name = "labelRandom1";
+            this.labelRandom1.Size = new System.Drawing.Size(83, 20);
+            this.labelRandom1.TabIndex = 4;
+            this.labelRandom1.Text = "Random 1";
             // 
             // textBoxSine1
             // 
@@ -114,22 +116,22 @@
             this.labelSine1.TabIndex = 2;
             this.labelSine1.Text = "Sine 1";
             // 
-            // textBoxRandom1
+            // textBoxRamp1
             // 
-            this.textBoxRandom1.Location = new System.Drawing.Point(29, 163);
-            this.textBoxRandom1.Name = "textBoxRandom1";
-            this.textBoxRandom1.Size = new System.Drawing.Size(100, 26);
-            this.textBoxRandom1.TabIndex = 5;
-            this.textBoxRandom1.Text = "0.00";
+            this.textBoxRamp1.Location = new System.Drawing.Point(29, 54);
+            this.textBoxRamp1.Name = "textBoxRamp1";
+            this.textBoxRamp1.Size = new System.Drawing.Size(100, 26);
+            this.textBoxRamp1.TabIndex = 1;
+            this.textBoxRamp1.Text = "0.00";
             // 
-            // labelRandom1
+            // labelRamp1
             // 
-            this.labelRandom1.AutoSize = true;
-            this.labelRandom1.Location = new System.Drawing.Point(29, 140);
-            this.labelRandom1.Name = "labelRandom1";
-            this.labelRandom1.Size = new System.Drawing.Size(83, 20);
-            this.labelRandom1.TabIndex = 4;
-            this.labelRandom1.Text = "Random 1";
+            this.labelRamp1.AutoSize = true;
+            this.labelRamp1.Location = new System.Drawing.Point(29, 31);
+            this.labelRamp1.Name = "labelRamp1";
+            this.labelRamp1.Size = new System.Drawing.Size(65, 20);
+            this.labelRamp1.TabIndex = 0;
+            this.labelRamp1.Text = "Ramp 1";
             // 
             // groupBox1
             // 
@@ -137,7 +139,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBoxRamp2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(176, 12);
@@ -181,13 +183,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Sine 1";
             // 
-            // textBox3
+            // textBoxRamp2
             // 
-            this.textBox3.Location = new System.Drawing.Point(29, 54);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.Text = "0.00";
+            this.textBoxRamp2.Location = new System.Drawing.Point(29, 54);
+            this.textBoxRamp2.Name = "textBoxRamp2";
+            this.textBoxRamp2.Size = new System.Drawing.Size(100, 26);
+            this.textBoxRamp2.TabIndex = 1;
+            this.textBoxRamp2.Text = "0.00";
             // 
             // label3
             // 
@@ -204,7 +206,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.textBoxRamp3);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(340, 12);
@@ -248,13 +250,13 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Sine 1";
             // 
-            // textBox6
+            // textBoxRamp3
             // 
-            this.textBox6.Location = new System.Drawing.Point(29, 54);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 26);
-            this.textBox6.TabIndex = 1;
-            this.textBox6.Text = "0.00";
+            this.textBoxRamp3.Location = new System.Drawing.Point(29, 54);
+            this.textBoxRamp3.Name = "textBoxRamp3";
+            this.textBoxRamp3.Size = new System.Drawing.Size(100, 26);
+            this.textBoxRamp3.TabIndex = 1;
+            this.textBoxRamp3.Text = "0.00";
             // 
             // label6
             // 
@@ -354,11 +356,35 @@
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
+            // buttonReadItemRamp1
+            // 
+            this.buttonReadItemRamp1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonReadItemRamp1.Location = new System.Drawing.Point(176, 239);
+            this.buttonReadItemRamp1.Name = "buttonReadItemRamp1";
+            this.buttonReadItemRamp1.Size = new System.Drawing.Size(158, 32);
+            this.buttonReadItemRamp1.TabIndex = 6;
+            this.buttonReadItemRamp1.Text = "READ RAMP 1";
+            this.buttonReadItemRamp1.UseVisualStyleBackColor = true;
+            this.buttonReadItemRamp1.Click += new System.EventHandler(this.buttonReadItemRamp1_Click);
+            // 
+            // buttonSubscribe
+            // 
+            this.buttonSubscribe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSubscribe.Location = new System.Drawing.Point(340, 239);
+            this.buttonSubscribe.Name = "buttonSubscribe";
+            this.buttonSubscribe.Size = new System.Drawing.Size(158, 32);
+            this.buttonSubscribe.TabIndex = 7;
+            this.buttonSubscribe.Text = "SUBSCRIBE";
+            this.buttonSubscribe.UseVisualStyleBackColor = true;
+            this.buttonSubscribe.Click += new System.EventHandler(this.buttonSubscribe_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(675, 279);
+            this.Controls.Add(this.buttonSubscribe);
+            this.Controls.Add(this.buttonReadItemRamp1);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonSetting);
             this.Controls.Add(this.groupBox3);
@@ -398,14 +424,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxRamp2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxRamp3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox7;
@@ -416,6 +442,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonSetting;
         private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Button buttonReadItemRamp1;
+        private System.Windows.Forms.Button buttonSubscribe;
     }
 }
 
