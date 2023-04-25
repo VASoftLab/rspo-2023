@@ -41,21 +41,40 @@ namespace rspo_2023
             var itemValue = e.Vtq.DisplayValue(); // Tag Value
             var state = (int)e.Arguments.State; // ID
 
+            double itemDouble = Double.Parse(itemValue);
+
             switch (state)
             {
                 case 1:
                     textBoxRamp1.Invoke((MethodInvoker)delegate {
                         textBoxRamp1.Text = itemValue;
                     });
+                    opcPanel1.Invoke((MethodInvoker)delegate {
+                        opcPanel1.Ramp = itemDouble;
+                    });
                     break;
                 case 2:
                     textBoxRamp2.Invoke((MethodInvoker)delegate {
                         textBoxRamp2.Text = itemValue;
                     });
+                    opcPanel2.Invoke((MethodInvoker)delegate {
+                        opcPanel2.Ramp = itemDouble;
+                    });
                     break;
                 case 3:
                     textBoxRamp3.Invoke((MethodInvoker)delegate {
                         textBoxRamp3.Text = itemValue;
+                    });
+                    opcPanel3.Invoke((MethodInvoker)delegate {
+                        opcPanel3.Ramp = itemDouble;
+                    });
+                    break;
+                case 4:
+                    textBoxRamp4.Invoke((MethodInvoker)delegate {
+                        textBoxRamp4.Text = itemValue;
+                    });
+                    opcPanel4.Invoke((MethodInvoker)delegate {
+                        opcPanel4.Ramp = itemDouble;
                     });
                     break;
                 default:
@@ -80,6 +99,11 @@ namespace rspo_2023
         {
             if (appSet != null)
                 appSet.Load();
+
+            opcPanel1.PanelTitle = "DEVICE 1";
+            opcPanel2.PanelTitle = "DEVICE 2";
+            opcPanel3.PanelTitle = "DEVICE 3";
+            opcPanel4.PanelTitle = "DEVICE 4";
         }
 
         private void buttonReadItemRamp1_Click(object sender, EventArgs e)
@@ -114,13 +138,14 @@ namespace rspo_2023
             string tagName1 = "Simulation Examples.Functions.Ramp1";
             string tagName2 = "Simulation Examples.Functions.Ramp2";
             string tagName3 = "Simulation Examples.Functions.Ramp3";
+            string tagName4 = "Simulation Examples.Functions.Ramp4";
 
             isSubsribed = !isSubsribed;
             if (isSubsribed)
             {
                 buttonSubscribe.Text = "UNSUBSCRIBE";
 
-                var argumentArray = new DAItemGroupArguments[3];
+                var argumentArray = new DAItemGroupArguments[4];
 
                 argumentArray[0] = new DAItemGroupArguments(
                     appSet.MachineName,
@@ -136,6 +161,11 @@ namespace rspo_2023
                     appSet.MachineName,
                     appSet.ServerClass,
                     tagName3, appSet.UpdateRate, 3);
+
+                argumentArray[3] = new DAItemGroupArguments(
+                    appSet.MachineName,
+                    appSet.ServerClass,
+                    tagName4, appSet.UpdateRate, 4);
 
                 easyDAClient.SubscribeMultipleItems(argumentArray);
             }

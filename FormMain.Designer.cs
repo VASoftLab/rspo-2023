@@ -54,12 +54,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxRamp4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.buttonSetting = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonReadItemRamp1 = new System.Windows.Forms.Button();
             this.buttonSubscribe = new System.Windows.Forms.Button();
+            this.opcPanel4 = new rspo_2023.OPCPanel();
+            this.opcPanel3 = new rspo_2023.OPCPanel();
+            this.opcPanel2 = new rspo_2023.OPCPanel();
+            this.opcPanel1 = new rspo_2023.OPCPanel();
             this.groupBoxDevice1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -127,9 +131,10 @@
             // labelRamp1
             // 
             this.labelRamp1.AutoSize = true;
+            this.labelRamp1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelRamp1.Location = new System.Drawing.Point(29, 31);
             this.labelRamp1.Name = "labelRamp1";
-            this.labelRamp1.Size = new System.Drawing.Size(65, 20);
+            this.labelRamp1.Size = new System.Drawing.Size(71, 20);
             this.labelRamp1.TabIndex = 0;
             this.labelRamp1.Text = "Ramp 1";
             // 
@@ -194,9 +199,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(29, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Ramp 1";
             // 
@@ -273,7 +279,7 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.textBox8);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.textBox9);
+            this.groupBox3.Controls.Add(this.textBoxRamp4);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox3.Location = new System.Drawing.Point(504, 12);
@@ -317,13 +323,13 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Sine 1";
             // 
-            // textBox9
+            // textBoxRamp4
             // 
-            this.textBox9.Location = new System.Drawing.Point(29, 54);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 26);
-            this.textBox9.TabIndex = 1;
-            this.textBox9.Text = "0.00";
+            this.textBoxRamp4.Location = new System.Drawing.Point(29, 54);
+            this.textBoxRamp4.Name = "textBoxRamp4";
+            this.textBoxRamp4.Size = new System.Drawing.Size(100, 26);
+            this.textBoxRamp4.TabIndex = 1;
+            this.textBoxRamp4.Text = "0.00";
             // 
             // label9
             // 
@@ -337,7 +343,7 @@
             // buttonSetting
             // 
             this.buttonSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSetting.Location = new System.Drawing.Point(12, 239);
+            this.buttonSetting.Location = new System.Drawing.Point(12, 528);
             this.buttonSetting.Name = "buttonSetting";
             this.buttonSetting.Size = new System.Drawing.Size(158, 32);
             this.buttonSetting.TabIndex = 4;
@@ -348,7 +354,7 @@
             // buttonClose
             // 
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonClose.Location = new System.Drawing.Point(504, 239);
+            this.buttonClose.Location = new System.Drawing.Point(504, 528);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(159, 32);
             this.buttonClose.TabIndex = 5;
@@ -359,7 +365,7 @@
             // buttonReadItemRamp1
             // 
             this.buttonReadItemRamp1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonReadItemRamp1.Location = new System.Drawing.Point(176, 239);
+            this.buttonReadItemRamp1.Location = new System.Drawing.Point(176, 528);
             this.buttonReadItemRamp1.Name = "buttonReadItemRamp1";
             this.buttonReadItemRamp1.Size = new System.Drawing.Size(158, 32);
             this.buttonReadItemRamp1.TabIndex = 6;
@@ -370,7 +376,7 @@
             // buttonSubscribe
             // 
             this.buttonSubscribe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSubscribe.Location = new System.Drawing.Point(340, 239);
+            this.buttonSubscribe.Location = new System.Drawing.Point(340, 528);
             this.buttonSubscribe.Name = "buttonSubscribe";
             this.buttonSubscribe.Size = new System.Drawing.Size(158, 32);
             this.buttonSubscribe.TabIndex = 7;
@@ -378,11 +384,47 @@
             this.buttonSubscribe.UseVisualStyleBackColor = true;
             this.buttonSubscribe.Click += new System.EventHandler(this.buttonSubscribe_Click);
             // 
+            // opcPanel4
+            // 
+            this.opcPanel4.Location = new System.Drawing.Point(513, 236);
+            this.opcPanel4.Name = "opcPanel4";
+            this.opcPanel4.PanelTitle = null;
+            this.opcPanel4.Size = new System.Drawing.Size(164, 270);
+            this.opcPanel4.TabIndex = 11;
+            // 
+            // opcPanel3
+            // 
+            this.opcPanel3.Location = new System.Drawing.Point(343, 236);
+            this.opcPanel3.Name = "opcPanel3";
+            this.opcPanel3.PanelTitle = null;
+            this.opcPanel3.Size = new System.Drawing.Size(164, 270);
+            this.opcPanel3.TabIndex = 10;
+            // 
+            // opcPanel2
+            // 
+            this.opcPanel2.Location = new System.Drawing.Point(176, 236);
+            this.opcPanel2.Name = "opcPanel2";
+            this.opcPanel2.PanelTitle = "DEVICE 2";
+            this.opcPanel2.Size = new System.Drawing.Size(164, 270);
+            this.opcPanel2.TabIndex = 9;
+            // 
+            // opcPanel1
+            // 
+            this.opcPanel1.Location = new System.Drawing.Point(10, 236);
+            this.opcPanel1.Name = "opcPanel1";
+            this.opcPanel1.PanelTitle = "DEVICE 1";
+            this.opcPanel1.Size = new System.Drawing.Size(164, 270);
+            this.opcPanel1.TabIndex = 8;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 279);
+            this.ClientSize = new System.Drawing.Size(777, 572);
+            this.Controls.Add(this.opcPanel4);
+            this.Controls.Add(this.opcPanel3);
+            this.Controls.Add(this.opcPanel2);
+            this.Controls.Add(this.opcPanel1);
             this.Controls.Add(this.buttonSubscribe);
             this.Controls.Add(this.buttonReadItemRamp1);
             this.Controls.Add(this.buttonClose);
@@ -438,12 +480,16 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBoxRamp4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonSetting;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonReadItemRamp1;
         private System.Windows.Forms.Button buttonSubscribe;
+        private OPCPanel opcPanel1;
+        private OPCPanel opcPanel2;
+        private OPCPanel opcPanel3;
+        private OPCPanel opcPanel4;
     }
 }
 
